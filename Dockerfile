@@ -1,2 +1,8 @@
+# From nginx image
 FROM nginx
-COPY nginx.conf /usr/share/nginx/html
+
+# Make www folder
+RUN mkdir -p /var/www
+
+# Copy config
+COPY nginx.conf /etc/nginx/nginx.conf
